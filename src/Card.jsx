@@ -7,8 +7,9 @@ import Title from "./Title";
 export default function Card() {
   const [count,setCount] = useState(0);
   const locked = count === 5 ? true : false;
+
   return (
-    <div className={`card ${locked ? "card-limit" : ""}`}>
+    <div className={`card ${locked ? 'card--limit' : ''}`}>
       <Title locked={locked} />
       <Count count={count} />
       <ResetButton setCount={setCount} />
